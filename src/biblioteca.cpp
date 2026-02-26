@@ -63,14 +63,15 @@ void Biblioteca::listarLivrosEmprestados() const{
         // Verificar se o empréstimo ainda está ativo
         if (emprestimos[i]->isAtivo()) {
             encontrou = true;
+            int x = i+1;
             // Pegar o livro e o usuário através do objeto Emprestimo
             Livro* livro = emprestimos[i]->getLivro();
             Usuario* usuario = emprestimos[i]->getUsuario();
-            std::cout << "====================================" << std::endl;
+            std::cout << "=============[" << "Livro " << x << "]==============" << std::endl;
             std::cout << "Livro: " << livro->getTitulo() << std::endl;
             std::cout << "ID: " << livro->getId() << std::endl;
             std::cout << "Autor: " << livro->getAutor() << std::endl;
-            std::cout << "Emprestado para: " << usuario->getNome() << "ID: " << usuario->getId() << std::endl;
+            std::cout << "Emprestado para: " << usuario->getNome() << " ID: " << usuario->getId() << std::endl;
             std::cout << "====================================" << std::endl;
         }
     }
