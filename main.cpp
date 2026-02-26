@@ -94,7 +94,7 @@ int main() {
             std::cin >> idUsuario;
             std::cin.ignore();
 
-            std::cout << "Data do emprestimo: ";
+            std::cout << "Data do emprestimo (xx/xx/xxxx): ";
             std::getline(std::cin, data);
 
             Livro* livro = biblioteca.buscarLivroPorId(idLivro);
@@ -119,7 +119,7 @@ int main() {
             std::cin >> idLivro;
             std::cin.ignore();
 
-            std::cout << "Data da devolucao: ";
+            std::cout << "Data da devolucao (xx/xx/xxxx): ";
             std::getline(std::cin, data);
 
             Livro* livro = biblioteca.buscarLivroPorId(idLivro);
